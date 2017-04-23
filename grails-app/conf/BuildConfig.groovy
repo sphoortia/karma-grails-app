@@ -5,9 +5,8 @@ grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
-//grails.project.war.file = "target/${appName}-${appVersion}.war"
 
-/*grails.project.fork = [
+grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
     //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
 
@@ -19,14 +18,6 @@ grails.project.source.level = 1.6
     war: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
     // configure settings for the Console UI JVM
     console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
-]*/
-
-grails.project.fork = [
-        compile: false,
-        test: false,
-        run: false,
-        war: false,
-        console: false
 ]
 
 grails.project.dependency.resolver = "maven" // or ivy
@@ -48,10 +39,7 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
-        // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+
     }
 
     dependencies {
@@ -76,11 +64,6 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.1"
 
         test ":karma-test-runner:0.2.4"
-        // Uncomment these to enable additional asset-pipeline capabilities
-        //compile ":sass-asset-pipeline:1.9.0"
-        //compile ":less-asset-pipeline:1.10.0"
-        //compile ":coffee-asset-pipeline:1.8.0"
-        //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
 
 
