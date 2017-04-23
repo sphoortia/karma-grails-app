@@ -4,18 +4,23 @@ This uses NodeJs  [https://nodejs.org/en/] , grails 2.5.0 [https://grails.org/do
 Internally it uses plugin karma-test-runner:0.2.4 [https://grails.org/plugin/karma-test-runner]
 
 Make sure you setup
+```bash
 npm install -g karma
 npm install -g karma-remote-reporter
 npm install -g karma-jasmine
 npm install -g karma-phantomjs-launcher
 npm install -g karma-coverage
+```
 
 Once cloned run the following to test
+```bash
 grails clean
 grails compile
 grails test-app unit:javascript
+```
 
 output is shown in console for
+```bash
 C:\work>grails test-app unit:javascript
 | Running without daemon...
 ..............................................Karma will be started with process builder args: [karma.cmd, start, C:\work\gitHub\karma-grails-app\.\karma.conf.js]
@@ -33,6 +38,7 @@ Karma result receiver server startet at port: 9889
 |Running 1 javascript test... 3 of 3
 |Completed 3 javascript tests, 0 failed in 0m 8s
 | Tests PASSED - view reports in C:\work\gitHub\karma-grails-app\target\test-reports
+```
 
 The coverage is captured and gets added to a folder  C:\work\gitHub\karma-grails-app\coverage
 We can access the index.html to see the details.
